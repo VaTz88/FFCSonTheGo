@@ -3,26 +3,204 @@
 * All content on site is present in different blocks of div and each div has a class container or container-fluid
 * The order of elements here is the order in which they appear on the page
 */
-
-.container,
-.container-fluid {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+body {
+    padding-top: 5rem;
 }
 
-.container-fluid {
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+nav {
+    box-shadow: 0 2px 5px #000;
+}
+
+.navbar-brand {
+    color: #9c27b0 !important;
+    font-weight: bold;
+}
+
+.nav-btn-outline {
+    color: #9c27b0;
+    border-color: #9c27b0;
+    border-width: 2px;
+}
+
+.nav-btn-outline:hover {
+    color: #ffffff;
+    border-color: #9c27b0 !important;
+    background-color: #9c27b0 !important;
+}
+
+.nav-btn-outline:active,
+.nav-btn-outline:focus,
+.nav-btn-outline.show {
+    color: #ffffff;
+    border-color: #812092 !important;
+    background-color: #812092 !important;
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+.nav-link small {
+    line-height: 100%;
+    vertical-align: text-top;
+}
+
+.nav-link i,
+.nav-link small {
+    color: #9c27b0;
+}
+
+.nav-link i:hover,
+.nav-link small:hover {
+    color: #812092;
+}
+
+/**
+ * Theme toggle switch
+ */
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.toggle {
+    background-color: #9c27b0;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    margin: 0 calc(0.5rem * 1.5);
+    transform: scale(1.5);
+}
+
+.toggle .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .toggle .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #ffffff;
+}
+
+.fa-sun {
+    color: #ffffff;
 }
 
 .container-fluid .row {
-    margin-right: 0 !important;
-    margin-left: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+label {
+    font-weight: bold;
+}
+
+input.form-control {
+    margin-bottom: 0.3rem;
+}
+
+#inputCourse {
+    box-shadow: none;
+}
+
+#inputCourse:focus,
+.bootstrap-select button.dropdown-toggle:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe !important;
+    outline: none !important;
+    box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.bootstrap-select button.dropdown-toggle {
+    border-color: #ccc !important;
+    border-radius: 4px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
+    margin-bottom: 0.3rem;
+}
+
+blockquote {
+    width: 100%;
+    background: #ddd;
+    margin: 0 !important;
+    padding: 1rem 1.2rem !important;
+    border-radius: 0.5rem;
+}
+
+.blockquote-container {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.blockquote-text {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    padding-left: 0.5rem;
+    border-left: 0.2rem solid #555;
+}
+
+#insertCourseSelectionOptions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;
+    /* Values taken from bootstrap */
+    padding-right: calc(var(--bs-gutter-x) * 0.5 - 5px);
+    padding-left: calc(var(--bs-gutter-x) * 0.5 - 5px);
+}
+
+.list-group-item {
+    border-width: 1px !important;
+    background: none;
+    border-color: #9c27b0;
+    border-radius: 0.5rem !important;
+    margin: 5px;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.list-group-item:hover {
+    background: #f8ceff;
+    border-color: #f8cef8;
+}
+
+.list-group-item.selected {
+    background: #f8ceff;
+    border-color: #f8cef8;
+}
+
+.list-group-item-heading {
+    word-break: break-all;
+    margin: 5px 0;
+}
+
+.list-group-item-text {
+    margin: 5px 0;
+}
+
+#slot-sel-area-toggle-fields {
+    margin: 1rem;
 }
 
 hr {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+    margin: 1rem 0 0.5rem 0 !important;
 }
 
 header .alert {
@@ -38,27 +216,66 @@ header .alert {
     width: 80%;
 }
 
-#option_buttons {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+.btn-close {
+    background-image: none;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+}
+
+#saved-tt-picker-label {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.tt-picker-label {
+    padding-right: 1.2rem;
+    width: 100%;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.tt-picker-edit,
+.tt-picker-remove {
+    padding-left: 0.5rem;
 }
 
 .tt-picker-edit-input {
-    /* margin same as bootstrap padding default for .dropdown-menu>li>a*/
+    /* Margin same as bootstrap padding default for .dropdown-menu > li > a */
     margin: 3px 20px;
 }
 
-.tt-picker-remove {
-    margin-left: 1rem;
+#option-buttons {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-#timetable .table {
+#option-buttons button {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#toggleClickToSelect {
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.container-xxl {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.table {
     margin-bottom: 0 !important;
-}
-
-.quick-selection .btn {
-    min-width: 4.5em;
-    margin: 0.25em;
 }
 
 #insertSlotBtn:empty {
@@ -70,12 +287,52 @@ header .alert {
     margin-left: 0;
 }
 
-#courseListTable .table {
+th,
+td {
     margin-bottom: 0 !important;
+    padding: 0;
+    white-space: nowrap;
 }
 
-#courseListTable .table-responsive {
-    margin-bottom: 0px !important;
+.quick-selection {
+    margin: 1rem auto;
+    width: 100%;
+}
+
+.quick-selection div {
+    width: 100%;
+    overflow: auto;
+}
+
+.quick-selection table {
+    margin: auto;
+}
+
+.quick-selection td {
+    display: flex;
+}
+
+.quick-selection td button:first-child {
+    margin-left: 0;
+}
+
+.quick-selection td button:last-child {
+    margin-right: 0;
+}
+
+.btn-quick {
+    flex-grow: 1;
+    width: fit-content;
+    margin: 0.3rem;
+    background-color: #ffc107 !important;
+}
+
+.btn-quick.highlight {
+    background-color: #64dd17 !important;
+}
+
+.btn-quick:hover {
+    background-color: #64dd17 !important;
 }
 
 #CourseAllocationReport-btn {
@@ -91,13 +348,8 @@ footer {
 * Font, color and other styling
 * Order of elements here is same as they appear on the page
 */
-
 #shareWhatsApp img {
     vertical-align: bottom;
-}
-
-#option_buttons .dropdown-menu > li:not(:last-child) {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .tt-picker-edit-ok {
@@ -118,51 +370,51 @@ footer {
 
 .LabHours {
     font-weight: bold;
-    background-color: #99ccff;
+    background-color: #99ccff !important;
     cursor: default;
 }
 
 .TheoryHours {
     font-weight: bold;
-    background-color: #ccccff;
+    background-color: #ccccff !important;
     cursor: default;
 }
 
 .ColumnOneDays {
     font-weight: bold;
-    background-color: #c0c0c0;
+    background-color: #c0c0c0 !important;
     cursor: default;
 }
 
 .TimetableContent {
     text-transform: uppercase;
     color: grey;
-    background-color: #ffffcc;
+    background-color: #ffffcc !important;
     cursor: pointer;
 }
 
 .TimetableContent:hover {
     color: black;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
 .TimetableContent.highlight {
     color: black;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
 .TimetableContent.highlight:hover {
     color: grey;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
 .TimetableContent[disabled] {
     text-transform: capitalize;
     color: grey;
-    background-color: #ffffcc;
+    background-color: #ffffcc !important;
     cursor: default;
 }
 
@@ -173,7 +425,6 @@ footer {
 }
 
 /* .tt-course-code used when inserting course code in timetable */
-
 #timetable td div {
     font-size: 0.9em;
 }
@@ -226,7 +477,7 @@ footer {
 .TFF2,
 .TGG2 {
     color: grey;
-    background-color: #ffffcc;
+    background-color: #ffffcc !important;
     cursor: pointer;
 }
 
@@ -273,7 +524,7 @@ footer {
 .TFF2:hover,
 .TGG2:hover {
     color: black;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
@@ -320,7 +571,7 @@ footer {
 .TFF2.highlight,
 .TGG2.highlight {
     color: black;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
@@ -367,111 +618,10 @@ footer {
 .TFF2.highlight:hover,
 .TGG2.highlight:hover {
     color: grey;
-    background-color: #ccff33;
+    background-color: #ccff33 !important;
     cursor: pointer;
 }
 
-.A1-tile,
-.B1-tile,
-.C1-tile,
-.D1-tile,
-.E1-tile,
-.F1-tile,
-.G1-tile,
-.A2-tile,
-.B2-tile,
-.C2-tile,
-.D2-tile,
-.E2-tile,
-.F2-tile,
-.G2-tile,
-.TA1-tile,
-.TB1-tile,
-.TC1-tile,
-.TD1-tile,
-.TE1-tile,
-.TF1-tile,
-.TG1-tile,
-.TA2-tile,
-.TB2-tile,
-.TC2-tile,
-.TD2-tile,
-.TE2-tile,
-.TF2-tile,
-.TG2-tile,
-.TAA1-tile,
-.TBB1-tile,
-.TCC1-tile,
-.TDD1-tile,
-.TEE1-tile,
-.TFF1-tile,
-.TGG1-tile,
-.TAA2-tile,
-.TBB2-tile,
-.TCC2-tile,
-.TDD2-tile,
-.TEE2-tile,
-.TFF2-tile,
-.TGG2-tile {
-    background-color: #ffc107;
-}
-
-.A1-tile.highlight,
-.B1-tile.highlight,
-.C1-tile.highlight,
-.D1-tile.highlight,
-.E1-tile.highlight,
-.F1-tile.highlight,
-.G1-tile.highlight,
-.A2-tile.highlight,
-.B2-tile.highlight,
-.C2-tile.highlight,
-.D2-tile.highlight,
-.E2-tile.highlight,
-.F2-tile.highlight,
-.G2-tile.highlight,
-.TA1-tile.highlight,
-.TB1-tile.highlight,
-.TC1-tile.highlight,
-.TD1-tile.highlight,
-.TE1-tile.highlight,
-.TF1-tile.highlight,
-.TG1-tile.highlight,
-.TA2-tile.highlight,
-.TB2-tile.highlight,
-.TC2-tile.highlight,
-.TD2-tile.highlight,
-.TE2-tile.highlight,
-.TF2-tile.highlight,
-.TG2-tile.highlight,
-.TAA1-tile.highlight,
-.TBB1-tile.highlight,
-.TCC1-tile.highlight,
-.TDD1-tile.highlight,
-.TEE1-tile.highlight,
-.TFF1-tile.highlight,
-.TGG1-tile.highlight,
-.TAA2-tile.highlight,
-.TBB2-tile.highlight,
-.TCC2-tile.highlight,
-.TDD2-tile.highlight,
-.TEE2-tile.highlight,
-.TFF2-tile.highlight,
-.TGG2-tile.highlight {
-    background-color: #64dd17;
-}
-
-/* Quick selection tiles/buttons */
-
-.quick-selection {
-    text-align: center;
-}
-
-.quick-selection .btn:hover {
-    background-color: #64dd17;
-}
-
-#slot-sel-area input,
 .list-group-item {
     text-transform: uppercase;
 }
@@ -485,22 +635,6 @@ footer {
     font-size: 1.5rem;
 }
 
-#slot-sel-area #insertCourseSelectionOptions div {
-    display: flex;
-    margin-bottom: 0.13rem;
-    /* break word on overflow */
-    word-wrap: break-word;
-    white-space: normal;
-}
-
-#slot-sel-area #insertCourseSelectionOptions div button {
-    min-width: 20rem;
-}
-
-#slot-sel-area #insertCourseSelectionOptions p {
-    color: #616161;
-}
-
 #insertSlotBtn .btn {
     white-space: normal;
 }
@@ -509,43 +643,42 @@ footer {
     /* background-color important for screenshot */
     background-color: white;
     border: 1px solid #e5e5e5;
+    margin-top: 0.3rem;
+    border-color: #000;
 }
 
-#courseListTable table th,
-#courseListTable table tr {
+#courseListTable th,
+#courseListTable tr {
     text-align: center;
+    border-color: #000;
 }
 
-#courseListTable table tr th:not(:last-of-type) {
+#courseListTable tr th:not(:last-of-type) {
     cursor: pointer;
 }
 
-#courseListTable table tr th.sorted,
-#courseListTable table tr th:hover:not(:last-of-type) {
+#courseListTable tr th.sorted,
+#courseListTable tr th:hover:not(:last-of-type) {
     background-color: #f1f7ee;
 }
 
-#courseListTable table tr th.ascending::after {
+#courseListTable tr th.ascending::after {
     content: ' ↓';
     font-size: larger;
 }
 
-#courseListTable table tr th.descending::after {
+#courseListTable tr th.descending::after {
     content: ' ↑';
     font-size: larger;
     font-weight: bold;
 }
 
-#courseListTable table tr:not(:last-of-type) {
+#courseListTable tr:not(:last-of-type) {
     cursor: pointer;
 }
 
-#courseListTable .close {
-    float: none;
-}
-
-#saved-tt-picker .tt-table-name {
-    margin-right: 2rem;
+.table-active:hover {
+    --bs-table-accent-bg: var(--bs-table-active-bg) !important;
 }
 
 footer {
@@ -564,27 +697,25 @@ footer a:hover {
 /**
  * Disable text selection
  */
-
 .noselect {
-    -webkit-touch-callout: none;
     /* iOS Safari */
-    -webkit-user-select: none;
+    -webkit-touch-callout: none;
     /* Safari */
-    -khtml-user-select: none;
+    -webkit-user-select: none;
     /* Konqueror HTML */
-    -moz-user-select: none;
+    -khtml-user-select: none;
     /* Firefox */
-    -ms-user-select: none;
+    -moz-user-select: none;
     /* Internet Explorer/Edge */
-    user-select: none;
+    -ms-user-select: none;
     /* Non-prefixed version, currently supported by Chrome and Opera */
+    user-select: none;
 }
 
 /**
  * Add horizontal scroll and don't collapse the elements
  * Putting it under @media preserve the original bootstrap properties when there is no overflow
  */
-
 .horizontal-scroll-no-collapse {
     overflow: auto;
     white-space: nowrap;
@@ -601,13 +732,40 @@ footer a:hover {
     }
 }
 
+@media screen and (max-width: 1400px) {
+    .container-xxl {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container-lg,
+    .container-xxl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    button span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #insertCourseSelectionOptions {
+        grid-template-columns: unset;
+    }
+}
+
 /**
  * Custom scrollbar
  */
-
 ::-webkit-scrollbar {
+    width: 10px;
     height: 10px;
-    background: transparent;
+    background: #f8ceff;
 }
 
 ::-webkit-scrollbar-thumb {

@@ -1,9 +1,18 @@
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../../node_modules/bootstrap-select/dist/css/bootstrap-select.min.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 import '../css/main.scss';
 
-import $ from 'jquery';
-window.jQuery = window.$ = $;
-require('bootstrap');
+/*
+ *  The package bootstrap-select is not compatable with bootstrap 5 at the
+ *  time of writing this. Once bootstrap-select has been upgraded to a stable
+ *  version with bootstrap 5 support, the bootstrap 4 javascript import &
+ *  it's dependency (bootstrap4) can be removed.
+ */
+import './attacher';
+import '../../node_modules/bootstrap4/dist/js/bootstrap.bundle';
+import '../../node_modules/bootstrap-select/dist/js/bootstrap-select';
+
 import html2canvas from 'html2canvas';
 
 import './color_change';
@@ -44,7 +53,10 @@ $(function() {
     // Timetable screenshot
     $('#takeScreenshotBtn').click(function() {
         // Hack: scroll to top gives better image with html2canvas
-        window.scrollTo(0, 0);
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant',
+        });
         var timetable_img_src;
         var courseListTable_img_src;
         var newWindow_data = '';
